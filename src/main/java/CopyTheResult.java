@@ -3,13 +3,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
-public class CountOccurrenceText {
+public class CopyTheResult {
 
-    private static final Logger log = LoggerFactory.getLogger(CountOccurrenceText.class);
+    private static final Logger log = LoggerFactory.getLogger(CopyTheResult.class);
 
-    public void writeToFile(File file, String content) {
+    public void writeToFile(File file, String count) {
         try (FileWriter writer = new FileWriter(file)) {
-            writer.write(content);
+            writer.write("las veces que se ha encontrado la palabra son: " + count);
         } catch (IOException e) {
             log.error("Error escribiendo en el archivo " + file.getName(), e);
         }
